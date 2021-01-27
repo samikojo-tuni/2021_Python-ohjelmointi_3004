@@ -2,14 +2,27 @@
 muuttuja1 = 1 # Integer, kokonaisluku
 muuttuja2 = "tekstiä" # string, merkkijono
 
+print("Muuttuja1:", muuttuja1)
+
 # Dynaamisesti tyypitetty kieli, muuttujan uudelleenmääritys voi muuttaa myös tyypin
 muuttuja1 = "Tekstiä" # Muuttuja oli aiemmin integer-tyyppinen, nyt string
+
+print("Muuttuja1:", muuttuja1)
+
+# del poistaa muuttujan. Tämän jälkeen sitä ei voi enää käyttää, ellei sitä määritetä
+# myöhemmin uudelleen.
+del(muuttuja1)
+
+# print("Muuttuja1:", muuttuja1)
 
 # Tyyppejä
 muuttuja1 = 1 # Integer, kokonaisluku
 muuttuja2 = "tekstiä" # string, merkkijono
 muuttuja3 = 1.2 # Float, desimaaliluku
 muuttuja4 = True # Boolean, totuusarvo: True tai False
+
+# Koska muuttuja1 määritettiin uudelleen del-komennon jälkeen, sitä voi käyttää jälleen
+print("Muuttuja1:", muuttuja1)
 
 numero1 = 2
 numero2 = 4
