@@ -15,4 +15,11 @@ phoneList = list(phones)
 phoneList.append("OnePlus")
 phones = tuple(phoneList)
 
+# Tämä ei toimi. Tuple on muuttamaton tietorakenne, joten yksittäisen alkion poisto
+# ei ole mahdollista edes del-komennolla
+del phones[1]
+
+# Koko tuplen pystyy poistamaan del-komennolla
+del phones
+
 print(phones)
