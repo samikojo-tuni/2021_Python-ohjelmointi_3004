@@ -1,6 +1,6 @@
 # Harjoitus 1:
 # Suunnittele ja toteuta listan väärinpäin kääntävä algoritmi. Algoritmi toimii siis siten,
-# että käännetyn listan ensimmäinen alkio on alkuperäisen listan ensimmäinen alkio jne.
+# että käännetyn listan ensimmäinen alkio on alkuperäisen listan viimeinen alkio jne.
 # Älä käytä list.reverse() funktiota
 
 # Harjoitus 2:
