@@ -1,4 +1,4 @@
-cars = ["Toyota", "Volvo", "Mazda", "Ford"] # Hakasulkeet kuvaa listaa
+cars = ["Toyota", "Volvo", "Mazda", "Ford"]  # Hakasulkeet kuvaa listaa
 print(cars)
 
 # append lisää alkion listan loppuun
@@ -29,7 +29,7 @@ print(cars)
 cars.append("Ford")
 print(cars)
 
-# del-komennolla voidaan poistaa useita alkioita kerralla (indeksiväli) 
+# del-komennolla voidaan poistaa useita alkioita kerralla (indeksiväli)
 del(cars[1:3])
 print(cars)
 
