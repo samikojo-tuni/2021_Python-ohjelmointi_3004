@@ -7,7 +7,7 @@ isAverageRun = False
 # ei ole mahdollista.
 # parametrille voidaan määrittää oletusarvo, esim. printResult=True. Oletusarvo toimii siten,
 # että mikäli funktiota kutsuttaessa parametrille ei anneta arvoa, saa se arvokseen oletusarvon
-def average(numbers, printResult: bool = True):
+def average(numbers: list, printResult: bool = True):
   result = 0
 
   # global avainsanan avulla voimme muuttaa globaalin muuttujan arvoa funktion sisällä
@@ -16,7 +16,10 @@ def average(numbers, printResult: bool = True):
   for number in numbers:
     result += number
 
-  average = result / len(numbers)
+  # Funktio voi myös kutsua muita funktioita oman toiminnallisuutensa toteuttamiseksi
+  # (kuten len-funktiota tässä esimerkissä)
+  length = len(numbers)
+  average = result / length
 
   if printResult:
     print(average)
@@ -26,6 +29,9 @@ def average(numbers, printResult: bool = True):
   print(isAverageRun)
 
   return average
+
+
+avg = average([1, 2, 3, 4, 5])
 
 # Summan laskeva funktio. Ottaa vastaan määrittämättömän määrän paramerteja.
 def sum(*numbers):
@@ -55,7 +61,7 @@ def main():
   print(isAverageRun)
 
   numbers = [9, 8, 7, 6, 5, 4, 3, 2, 1]
-  avg = average(numbers, False)
+  print(average(numbers, False))
 
   summa = sum(1, 2, 3, 4, 5, 6, 7, 8)
   summa2 = sum()
