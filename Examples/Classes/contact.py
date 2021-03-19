@@ -16,6 +16,10 @@ class Contact:
     # return self.first_name + " " + self.last_name + ", p. " + self.phone
     return f"{self.first_name} {self.last_name}, p. {self.phone}"
 
+  def ToCSV(self, sep=","):
+    # Serialisoidaan Contact-olio CSV-muotoon (muunnetaan muotoon joka voidaan esim. tallentaa levylle)
+    return f"{self.first_name}{sep}{self.last_name}{sep}{self.phone}{sep}{self.birth_year}"
+
   def Age(self):
     # datetime.now() palauttaa tämänhetkisen päivämäärän ja ajan.
     # Muuttuja year palauttaa tämänhetkisen vuoden

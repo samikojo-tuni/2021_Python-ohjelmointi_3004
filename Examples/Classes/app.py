@@ -3,7 +3,7 @@ from contact import Contact
 from student import Student
 
 def main():
-  phonebook = PhoneBook()
+  phonebook = PhoneBook("Examples/Classes/contacts.csv", ";")
 
   # Kaksi oliota. Oliot on luotu samasta luokasta, mutta niillä on omat muuttujien arvonsa (olion tila)
   person1 = Contact("Maija", "Meikäläinen", "123454321", 1990)
@@ -15,6 +15,8 @@ def main():
   phonebook.AddContact(person3)
 
   phonebook.PrintContacts()
+
+  phonebook.SaveContacts(";")
 
   # print(person1.ToString())
   # print(person2.ToString())
