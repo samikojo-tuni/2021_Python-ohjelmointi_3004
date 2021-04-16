@@ -41,7 +41,39 @@ class Vehicle:
         Metodi asettaa self.position muuttujan arvon siihen koordinaattiin, johon ajoneuvo on
         liikkunut.
     '''
-    pass
+    # 1. Luetaan nykyinen sijainti
+    targetPosition = self.position
+
+    # 2. for liike in 1..nopeus
+    for step in range(1, self.speed + 1):
+      if direction == Direction.UP:
+        x = targetPosition[0]
+        y = targetPosition[1] - 1
+      elif direction == Direction.DOWN:
+        x = targetPosition[0]
+        y = targetPosition[1] + 1
+      elif direction == Direction.LEFT:
+        x = targetPosition[0] - 1
+        y = targetPosition[1]
+      elif direction == Direction.RIGHT:
+        x = targetPosition[0] + 1
+        y = targetPosition[1]
+
+      # 2.1 tutkitaan, onko maasto kohdekoordinaatissa sallittu
+      try:
+        terrain = map.GetTerrainAt(x - 1, y - 1)
+        if terrain in self.allowedTerrains:
+          # 2.2 jos on, päivitä sijainti
+          targetPosition = (x, y)
+          self.position = targetPosition
+        else:
+          # 2.3 jos ei, poistu silmukasta
+          # Kohteessa on maastoa, jossa ajoneuvo ei voi liikkua, lopeta funktio
+          return
+
+      except IndexError:
+        # Yritetään liikkua kartan ulkopuolelle
+        return  # Lopetetaan funktion suoritus
 
 class Car(Vehicle):
   def __init__(self, x, y):

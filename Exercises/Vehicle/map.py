@@ -30,7 +30,7 @@ class Map():
         symbol = self.GetSymbol(terrain)
 
         for vehicle in vehicles:
-          if vehicle.position[0] == column and vehicle.position[1] == row:
+          if vehicle.position[0] - 1 == column and vehicle.position[1] - 1 == row:
             # Ajoneuvo on tässä koordinaatissa, piirretään sitä vastaava symboli
             symbol = vehicle.GetSymbol()
             break  # Oikea ajoneuvo löytyi, poistutaan silmukasta (mikro-optimointi)
