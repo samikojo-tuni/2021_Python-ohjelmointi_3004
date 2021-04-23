@@ -8,7 +8,7 @@
 # Harjoitus 2:
 # Kirjoita luokka, joka muuntaa lukuja roomalaisiksi numeroiksi ja päinvastoin
 #
-# Algoritmi desimaalista roomalaiseksi: 
+# Algoritmi desimaalista roomalaiseksi:
 # - Tallenna seuraavat arvot soveltuvaan tietorakenteeseen:
 # 1 	I
 # 4 	IV
@@ -24,14 +24,17 @@
 # 900 	CM
 # 1000 	M
 #
-# - Etsi tietorakenteesta suurin luku, joka on pienempi tai yhtä suuri kuin muunnettava luku. Ota lukua vastaava roomalainen numero talteen
-# ja vähennä muunnettavasta luvusta listan arvo
+# - Etsi tietorakenteesta suurin luku, joka on pienempi
+#   tai yhtä suuri kuin muunnettava luku. Ota lukua vastaava
+#   roomalainen numero talteen ja vähennä muunnettavasta
+#   luvusta roomalaista numeroa vastaava arvo
 # - Toista tämä, kunnes muunnettava luku on 0
 #
 # Algoritmi roomalaisesta desimaaliksi:
 # - Mieti tätä varten vastaava tietorakenne kuin yllä.
-# - Tutki, onko roomalaisen numeron 2 ensimmäistä merkkiä tunnettu roomalainen numero
-#   - Jos on, lisää tulokseen merkkiä vastaava desimaalinumero ja siirry tutkimaan seuraavia merkkejä
-#   - Jos ei ole, lisää vain yhtä merkkiä vastaava numero tulokseen ja siirry roomalaisessa
-#     numerossa yksi merkki eteenpäin
-
+# - Tutki, onko roomalaisen numeron 2 ensimmäistä merkkiä tunnettu
+#   roomalainen numero
+#   - Jos on, lisää tulokseen merkkiä vastaava desimaalinumero ja
+#     siirry roomalaisessa numerossa kaksi merkkiä eteenpäin
+#   - Jos ei ole, lisää vain yhtä merkkiä vastaava numero tulokseen
+#     ja siirry roomalaisessa numerossa yksi merkki eteenpäin
